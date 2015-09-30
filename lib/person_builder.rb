@@ -1,5 +1,4 @@
-require 'date'
-require_relative './person.rb'
+require 'helper.rb'
 
 class PersonBuilder
 

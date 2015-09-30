@@ -1,11 +1,5 @@
-require 'date'
-require_relative './person.rb'
-require_relative './list.rb'
-require_relative './list_builder.rb'
-require_relative './person_builder.rb'
-require_relative './comma_person_builder.rb'
-require_relative './space_person_builder.rb'
-require_relative './pipe_person_builder.rb'
+$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
+require 'helper.rb'
 
 comma_list = ListBuilder.new.create("../codetest_files/input_files/comma.txt")
 comma_list.map! { |person| CommaPersonBuilder.build(person) }

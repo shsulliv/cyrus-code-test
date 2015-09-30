@@ -1,6 +1,4 @@
-require 'date'
-require_relative './person.rb'
-require_relative './person_builder.rb'
+require 'helper.rb'
 
 class CommaPersonBuilder < PersonBuilder
 	def self.build(persons)

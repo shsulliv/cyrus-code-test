@@ -1,4 +1,4 @@
-require 'rspec'
+require 'spec_helper'
 
 describe "List" do
 	before do

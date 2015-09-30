@@ -1,4 +1,4 @@
-require 'rspec'
+require 'spec_helper'
 
 describe "Person" do
 	before do

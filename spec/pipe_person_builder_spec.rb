@@ -1,4 +1,4 @@
-require 'rspec'
+require 'spec_helper'
 
 describe "PipePersonBuilder" do
 	before do
