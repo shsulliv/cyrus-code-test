@@ -1,4 +1,4 @@
-require 'helper.rb'
+require 'helper'
 
 class Person
 	attr_reader :firstname,:lastname, :gender, :birthdate, :color

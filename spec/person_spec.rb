@@ -2,7 +2,12 @@ require 'spec_helper'
 
 describe "Person" do
 	before do
-		@person = Person.new(firstname: 'Neil', lastname: 'Abercrombie', gender: 'Male', birthdate: '2/13/1943', color: 'Tan')
+		@person = Person.new(
+			firstname: 'Neil',
+			lastname: 'Abercrombie',
+			gender: 'Male',
+			birthdate: Date.new(1943,2,13),
+			color: 'Tan')
 	end
 
 	describe "#to_s" do

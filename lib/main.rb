@@ -1,14 +1,17 @@
-$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
-require 'helper.rb'
+$LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'helper'
 
 comma_list = ListBuilder.new.create("../codetest_files/input_files/comma.txt")
-comma_list.map! { |person| CommaPersonBuilder.build(person) }
+comma_builder = CommaPersonBuilder.new
+comma_list.map! { |person| comma_builder.build(person) }
 
 space_list = ListBuilder.new.create("../codetest_files/input_files/space.txt")
-space_list.map! { |person| SpacePersonBuilder.build(person) }
+space_builder = SpacePersonBuilder.new
+space_list.map! { |person| space_builder.build(person) }
 
 pipe_list = ListBuilder.new.create("../codetest_files/input_files/pipe.txt")
-pipe_list.map! { |person| PipePersonBuilder.build(person) }
+pipe_builder = PipePersonBuilder.new
+pipe_list.map! { |person| pipe_builder.build(person) }
 
 master_list = List.new
 master_list

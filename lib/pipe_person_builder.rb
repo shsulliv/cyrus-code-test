@@ -1,8 +1,13 @@
-require 'helper.rb'
+require 'helper'
 
 class PipePersonBuilder < PersonBuilder
-	def self.build(persons)
-		arr = persons.split(' | ')
+	def initialize
+		super ' | ', '-'
+	end
+
+	def build(person)
+		arr = person_array(person)
+
 		Person.new(
 			firstname: arr[1],
 			lastname: arr[0],

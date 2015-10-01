@@ -1,7 +1,5 @@
 require 'date'
 
-$LOAD_PATH.unshift("#{File.dirname(__FILE__)}/../lib")
-
 require 'person'
 require 'list'
 require 'list_builder'

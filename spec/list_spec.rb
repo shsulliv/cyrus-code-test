@@ -3,13 +3,24 @@ require 'spec_helper'
 describe "List" do
 	before do
 		@list = List.new
-		@person_one = Person.new(firstname: 'Jon', lastname: 'Snow', gender: 'Male', birthdate: '1/31/1989', color: 'black')
-		@person_two = Person.new(firstname: 'Arya', lastname: 'Stark', gender: 'Female', birthdate: '12/14/1991', color: 'blue')
+		@person_one = Person.new(
+				firstname: 'Neil',
+				lastname: 'Abercrombie',
+				gender: 'Male',
+				birthdate: Date.new(1943,2,13),
+				color: 'Tan')
+		@person_two = Person.new(
+				firstname: 'Anna',
+				lastname: 'Kournikova',
+				gender: 'Female',
+				birthdate: Date.new(1975,6,3),
+				color: 'Red')
+		@new_list = [@person_one, @person_two]
 	end
 
 	describe "#add_list" do
 		it "adds a list to the current list" do
-			expect(@list.add_list(@new_list)).to include(["Dorne", "High Garden", "King's Landing"])
+			expect(@list.add_list(@new_list)).to eq([@person_one, @person_two])
 		end
 	end
 
